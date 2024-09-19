@@ -1,9 +1,9 @@
 #!/bin/bash
 
-dir=$1
+dir=$(basename "$1")
 
 fecha=$(date "+%Y-%m-%d")
 
-archivo_tar="${fecha}-${dir}.tar.gz"
+tar -csvf $fecha-$dir.tar.gz $dir
 
-tar -czvf $archivo_tar $dir
+
