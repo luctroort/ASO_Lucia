@@ -1,7 +1,9 @@
 #!/bin/bash
 
 num=$1
-contador=0
-for (( i=1; i<=i; i++ )); do
-  
-done
+
+if [[ $((num%2)) -eq 0 ]]; then
+  echo "El número no es primo."
+else
+  echo "El número es primo."
+fi

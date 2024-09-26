@@ -1,7 +1,8 @@
 #!/bin/bash
-for num in {1..5}; do
-  for (( i=1; i<=num; i++ )); do
-  echo -n "$num"
+
+for (( i=1; i<=5; i++ )); do
+  for (( j=1; j<=i; j++)); do
+  echo -n "$i"
   done
-echo
+echo ""
 done
