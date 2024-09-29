@@ -10,6 +10,12 @@ for entrada in "$directorio"/*; do
       tipo="Directorio"
     elif [[ -f $entrada ]]; then
       tipo="Archivo"
+    elif [[ -L $entrada ]]; then
+      tipo="Enlace simbólico"
+    elif [[ -b $entrada ]]; then
+      tipo="Archivo especial de bloque"
+    elif [[ -c $entrada ]]; then
+      tipo="Archivo especial de carácter"
     else
       tipo="Otro"
     fi
