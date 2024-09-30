@@ -1,6 +1,6 @@
 #!/bin/bash
 
-num=34
+num=$(( 1+RANDOM % 100 ))
 
 
 while [[ $intento -ne $num ]]; do
@@ -11,9 +11,9 @@ if [[ $intento -eq 0 ]]; then
 fi
 
 if [[ $intento -gt $num ]]; then
-  echo "El número es mayor que el que hay que adivinar."
+  echo "El número es menor"
 else
-  echo "El número es menor que el que hay que adivinar."
+  echo "El número es mayor"
 fi
 done
  echo "Enhorabuena has acertado"
